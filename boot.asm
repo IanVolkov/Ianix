@@ -74,7 +74,8 @@ mov eax, cr0
 or eax, 1
 mov cr0, eax
 
-jmp CODE:next
+; aligning the stack
+call CODE:next
 
 [BITS 32]
 next:
