@@ -85,16 +85,10 @@ next:
   mov fs, ax
   mov gs, ax 
 
-; aligning the stack
-sub esp, 6
 
 [EXTERN kernel_entry]
 jmp CODE:kernel_entry
 
-
-; data selector
-data_selector:
-  dw 0b10000
 
 gdt_descriptor:
   dw 0x17
